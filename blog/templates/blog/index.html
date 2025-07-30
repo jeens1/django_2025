@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blog</title>
+</head>
+<body>
+    templates/blog/index.html 안녕하세요
+    for post in posts
+        print(post)
+    {% for post in posts %}
+        <h1>{{ post }}</h1>
+        <h3>제목:{{ post.title }}</h3>
+        <hr>
+    {% endfor %}
+
+
+</body>
+</html>
