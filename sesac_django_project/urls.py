@@ -19,12 +19,17 @@ Including another URLconf
 from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
+
+import library
+
 urlpatterns = [
     path("admin/", admin.site.urls),
 
     path('', include("single_pages.urls")),
 
-    path('blog/', include('blog.urls'))
+    path('blog/', include('blog.urls')),
+
+    path('library/',include('library.urls')),
 
 
 ]
