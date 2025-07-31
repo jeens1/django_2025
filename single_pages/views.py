@@ -8,5 +8,9 @@ def landing(request):
                       'name':'홍길동','title':'landing'
                   })
 
-def home(request):
-    return render(request, 'home.html')
+def aboutme(request):
+    return render(request,
+                  'single_pages/aboutme.html',
+                  context={
+
+                  })

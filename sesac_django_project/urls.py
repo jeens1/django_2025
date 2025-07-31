@@ -20,6 +20,9 @@ from django.urls import path
 from django.contrib import admin
 from django.urls import path, include
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 import library
 
 urlpatterns = [
@@ -32,7 +35,13 @@ urlpatterns = [
     path('library/',include('library.urls')),
 
 
+
+
 ]
+
+# from django.conf import settings
+# from django.conf.urls.static import static
+urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 from django.contrib import admin
 from django.urls import path
 #http://127.0.0.1:8000/blog/
